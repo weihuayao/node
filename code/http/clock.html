@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div id="clock"></div>
+<script>
+  fetch('/clock', {
+    method: 'GET',
+  }).then(function (res) {
+    return res.json()
+  }).then(function (data) {
+    clock.innerHTML = data.time
+  })
+</script>
+</body>
+</html>
